@@ -9,12 +9,35 @@ st.set_page_config(
     layout="wide"
 )
 
-df = (
-    pd.read_csv(r"C:\Users\Caio\Desktop\Codigos\IMPACTA\3° Semestre\Aulas DataProject\base_desafio_final\usadas_treino\precos_carros.csv",
+df1 = (
+    pd.read_csv(r"precos_carros_parte1.csv",
             sep=",",
             encoding="utf-8",
             engine="python")
     )
+
+df2 = (
+    pd.read_csv(r"precos_carros_parte2.csv",
+            sep=",",
+            encoding="utf-8",
+            engine="python")
+    )
+
+df3 = (
+    pd.read_csv(r"precos_carros_parte3.csv",
+            sep=",",
+            encoding="utf-8",
+            engine="python")
+    )
+
+df4 = (
+    pd.read_csv(r"precos_carros_parte4.csv",
+            sep=",",
+            encoding="utf-8",
+            engine="python")
+    )
+
+df = df1 + df2 + df3 + df4
 
 columns_translate = {
     "year": "ano",
